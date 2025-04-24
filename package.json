@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "sass": "^1.87.0"
+  },
+  "devDependencies": {
+    "scss-reset": "^1.4.6"
+  }
+}
