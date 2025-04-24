@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="../scripts/openMobileMenu.js" defer></script>
     <!-- including font Oswald-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,9 +18,40 @@
   <body>
     <div class="wrapper_main">
       <div class="wrapper_box">
+        <!-- HEADER GOR MOBILE-->
+
+        <div class="header_mobile">
+          <div class="header_mobile-logo">
+            <img src="../images/logo-mobile.png" alt="Логотип" />
+          </div>
+          <div class="header_mobile-title">
+            <img src="../images/footer-logo.png" alt="Cat Energy" />
+          </div>
+          <div class="header_mobile-burger">
+            <span class="nav_burger"></span>
+            <span class="nav_burger"></span>
+            <span class="nav_burger"></span>
+          </div>
+        </div>
+
+        <div class="mobile__box_navigate hidden">
+          <nav class="mobile__navigate">
+            <li class="mobile__navigate_item">
+              <a href="../index.html" class="mobile__navigate_link">Главная</a>
+            </li>
+            <li class="mobile__navigate_item">
+              <a href="#" class="mobile__navigate_link">Каталог продукции</a>
+            </li>
+            <li class="mobile__navigate_item">
+              <a href="#" class="mobile__navigate_link">Подбор программы</a>
+            </li>
+          </nav>
+        </div>
+        <!-- END HEADER FOR MOBILE --->
+
         <header class="header">
           <div class="box_logo">
-            <a href="../index.html" class="item_link" title="На главную"
+            <a href="../index.html" title="На главную"
               ><img src="../images/logo-desktop.png" alt="Cat Energy"
             /></a>
           </div>
