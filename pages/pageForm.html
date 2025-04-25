@@ -18,7 +18,7 @@
   <body>
     <div class="wrapper_main">
       <div class="wrapper_box">
-        <!-- HEADER GOR MOBILE-->
+        <!-- HEADER FOR MOBILE-->
 
         <div class="header_mobile">
           <div class="header_mobile-logo">
@@ -49,6 +49,7 @@
         </div>
         <!-- END HEADER FOR MOBILE --->
 
+        <!-- Start Header -->
         <header class="header">
           <div class="box_logo">
             <a href="../index.html" title="На главную"
@@ -71,6 +72,93 @@
         </header>
       </div>
     </div>
+
+    <!-- Start Form box -->
+    <form
+      action="#"
+      method="post"
+      name="formSelectProgramm"
+      class="formProgramm"
+    >
+      <div class="wrapper_main">
+        <div class="wrapper_box">
+          <div class="page_desc mb-65">
+            <h2 class="page_desc_title mb-65">Подбор программы</h2>
+            <p class="page_desc_undertext">
+              Заполните анкету, и мы подберем программу питания для вашего кота
+            </p>
+          </div>
+          <div class="formProgramm_personal personal">
+            <div class="personal_cat">
+              <p>
+                <label for="nameCat" class="label">Имя:*</label>
+                <input type="text" name="nameCat" id="nameCat" required />
+              </p>
+              <p>
+                <label for="weightCat" class="label">Вес (кг):*</label>
+                <input type="text" name="weightCat" id="weightCat" required />
+              </p>
+              <p>
+                <label for="ageCat" class="label">Возраст (лет):</label>
+                <input type="text" name="ageCat" id="ageCat" required />
+              </p>
+            </div>
+            <div class="personal_types">
+              <div class="types_radio_box">
+                <p>
+                  <input
+                    type="radio"
+                    name="typeProgramm"
+                    id="typeProgramm_1"
+                    value="lessWeight"
+                    checked
+                  /><label for="typeProgramm_1">Похудение</label>
+                </p>
+                <p>
+                  <input
+                    type="radio"
+                    name="typeProgramm"
+                    id="typeProgramm_2"
+                    value="moreWeight"
+                  /><label for="typeProgramm_2">Набор массы</label>
+                </p>
+                <p>
+                  <input
+                    type="radio"
+                    name="typeProgramm"
+                    id="typeProgramm_3"
+                    value="help"
+                  /><label for="typeProgramm_3"
+                    >Не знаю (нужен ваш совет)</label
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="separatorForm">
+        <div class="wrapper_main">
+          <div class="wrapper_box">
+            <h2 class="separatorForm_title">
+              Контактные данные (владельца кота)
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper_main">
+        <div class="wrapper_box">
+          <div class="box_contacts">
+            <label for="email"></label>
+            <input type="email" name="email" id="email" />
+            <label for="phone"></label>
+            <input type="number" name="phone" id="phone" />
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Start Map box -->
     <div class="map_underlayout">
       <div class="map_inform_box inform_box">
         <div class="inform_box_left">
@@ -94,6 +182,7 @@
       </div>
     </div>
 
+    <!-- Start Footer -->
     <div class="wrapper_main footer_grey">
       <div class="wrapper_box">
         <footer class="footer">
