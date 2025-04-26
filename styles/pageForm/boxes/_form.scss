@@ -254,6 +254,12 @@
         p {
           text-transform: none;
         }
+        @media (max-width: $breakpoint-mobile) {
+          & {
+            flex-direction: column;
+            gap: 2rem;
+          }
+        }
       }
     }
   }
