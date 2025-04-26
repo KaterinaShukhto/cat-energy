@@ -41,6 +41,13 @@
           line-height: 25px;
         }
       }
+      &_left {
+        @media (max-width: $breakpoint-mobile) {
+          & > h3 {
+            font-size: 20px !important;
+          }
+        }
+      }
       &_right {
         p {
           color: $color-base-grey;
@@ -58,6 +65,8 @@
         position: static;
         min-width: 100%;
         background-color: $color-footer;
+        gap: 2rem;
+        padding: 2.8rem 1.9rem;
       }
     }
   }
