@@ -36,13 +36,22 @@ h6 {
     // border: 1px solid red;
     margin: 0 auto;
     @media (max-width: ($breakpoint-smaller - 1)) {
-      padding: 10px 20px;
+      & {
+        padding: 10px 20px;
+      }
+      &.underline {
+        border-bottom: 1px solid $color-border-form;
+      }
     }
     @media (min-width: $breakpoint-smaller) and (max-width: $breakpoint-tablet) {
-      padding: 25px 30px;
+      & {
+        padding: 25px 30px;
+      }
     }
     @media (min-width: ($breakpoint-tablet + 1)) and (max-width: $breakpoint-large) {
-      padding: 50px 70px;
+      & {
+        padding: 50px 70px;
+      }
     }
   }
   &_box {
@@ -61,6 +70,11 @@ h6 {
 
 .mb-65 {
   margin-bottom: 6.5rem;
+  @media (max-width: $breakpoint-smaller) {
+    & {
+      margin-bottom: 3.5rem;
+    }
+  }
 }
 
 input {
