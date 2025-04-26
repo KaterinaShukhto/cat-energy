@@ -1,0 +1,64 @@
+html {
+  font-size: 10px !important;
+  text-transform: uppercase;
+  @media (max-width: $breakpoint-large) {
+    font-size: 9px !important;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 8px !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-base-grey;
+}
+
+.wrapper {
+  &_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    // max-width: 144rem;
+    padding: 5.4rem 11rem;
+    // border: 1px solid red;
+    margin: 0 auto;
+    @media (max-width: ($breakpoint-smaller - 1)) {
+      padding: 10px 20px;
+    }
+    @media (min-width: $breakpoint-smaller) and (max-width: $breakpoint-tablet) {
+      padding: 25px 30px;
+    }
+    @media (min-width: ($breakpoint-tablet + 1)) and (max-width: $breakpoint-large) {
+      padding: 50px 70px;
+    }
+  }
+  &_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 122rem;
+    width: 100%;
+    margin: 0 auto;
+    // border: 1px solid rgb(0, 4, 255);
+    &.fd-row {
+      flex-direction: row;
+    }
+  }
+}
+
+.mb-65 {
+  margin-bottom: 6.5rem;
+}
