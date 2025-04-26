@@ -81,6 +81,12 @@ input {
   border: 1px solid $color-border-form;
   outline: none;
   padding: 5px 10px;
+  &:focus {
+    border-color: $color-border-form-active;
+  }
+  &.wrong {
+    border-color: $color-border-form-wrong;
+  }
 }
 
 input,
