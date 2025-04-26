@@ -12,6 +12,11 @@
       rel="stylesheet"
     />
     <!------------------------------>
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../styles/main.css" />
     <title>Cat Energy - Form</title>
   </head>
@@ -90,22 +95,34 @@
           </div>
           <div class="formProgramm_personal personal">
             <div class="personal_cat">
-              <p>
+              <div class="row_input">
                 <label for="nameCat" class="label">Имя:*</label>
                 <input type="text" name="nameCat" id="nameCat" required />
-              </p>
-              <p>
+              </div>
+              <div class="row_input">
                 <label for="weightCat" class="label">Вес (кг):*</label>
-                <input type="text" name="weightCat" id="weightCat" required />
-              </p>
-              <p>
+                <input
+                  type="number"
+                  min="0"
+                  name="weightCat"
+                  id="weightCat"
+                  required
+                />
+              </div>
+              <div class="row_input">
                 <label for="ageCat" class="label">Возраст (лет):</label>
-                <input type="text" name="ageCat" id="ageCat" required />
-              </p>
+                <input
+                  type="number"
+                  min="0"
+                  name="ageCat"
+                  id="ageCat"
+                  required
+                />
+              </div>
             </div>
             <div class="personal_types">
               <div class="types_radio_box">
-                <p>
+                <div>
                   <input
                     type="radio"
                     name="typeProgramm"
@@ -113,16 +130,16 @@
                     value="lessWeight"
                     checked
                   /><label for="typeProgramm_1">Похудение</label>
-                </p>
-                <p>
+                </div>
+                <div>
                   <input
                     type="radio"
                     name="typeProgramm"
                     id="typeProgramm_2"
                     value="moreWeight"
                   /><label for="typeProgramm_2">Набор массы</label>
-                </p>
-                <p>
+                </div>
+                <div>
                   <input
                     type="radio"
                     name="typeProgramm"
@@ -131,7 +148,7 @@
                   /><label for="typeProgramm_3"
                     >Не знаю (нужен ваш совет)</label
                   >
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -149,10 +166,84 @@
       <div class="wrapper_main">
         <div class="wrapper_box">
           <div class="box_contacts">
-            <label for="email"></label>
-            <input type="email" name="email" id="email" />
-            <label for="phone"></label>
-            <input type="number" name="phone" id="phone" />
+            <div class="row_input">
+              <label for="email">e-mail:*</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@mail.ru"
+                class="icon"
+              />
+            </div>
+            <div class="row_input">
+              <label for="phone">телефон:*</label>
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="+375 (29) 000-00-00"
+                class="icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="separatorForm">
+        <div class="wrapper_main">
+          <div class="wrapper_box">
+            <h2 class="separatorForm_title">Комментарий</h2>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper_main">
+        <div class="wrapper_box">
+          <div class="box_comment">
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="separatorForm">
+        <div class="wrapper_main">
+          <div class="wrapper_box">
+            <h2 class="separatorForm_title">Дополнительно</h2>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper_main">
+        <div class="wrapper_box">
+          <div class="box_extra">
+            <ul class="box_extra_list">
+              <li>
+                <input type="checkbox" name="sugar" id="sugar" value="sugar" />
+                <label for="sugar">Сахарозаменитель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="water" id="water" value="water" />
+                <label for="water">Питьевая вода</label>
+              </li>
+              <li>
+                <input type="checkbox" name="milk" id="milk" value="milk" />
+                <label for="milk">Молока</label>
+              </li>
+              <li>
+                <input
+                  type="checkbox"
+                  name="vitamin"
+                  id="vitamin"
+                  value="vitamin"
+                />
+                <label for="vitamin">Витамины</label>
+              </li>
+            </ul>
+            <div class="box_extra_submit">
+              <button type="submit">Отправить заявку</button>
+              <p>* - Обязательное поле</p>
+            </div>
           </div>
         </div>
       </div>

@@ -62,3 +62,14 @@ h6 {
 .mb-65 {
   margin-bottom: 6.5rem;
 }
+
+input {
+  border: 1px solid $color-border-form;
+  outline: none;
+  padding: 5px 10px;
+}
+
+input,
+label {
+  cursor: pointer;
+}

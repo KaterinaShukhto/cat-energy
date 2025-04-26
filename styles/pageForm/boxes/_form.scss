@@ -25,19 +25,19 @@
   }
 }
 
-// .form_wrapper {
-//   padding: 0;
-// }
-
-// .from_programm {
-//   width: 100%;
-// }
-
 .formProgramm {
+  display: block;
   .wrapper_main {
     padding: 6.5rem 7rem;
     &:first-child {
       padding-top: 0;
+    }
+  }
+  input {
+    width: 100%;
+    &.icon {
+      background-position: right 10px center;
+      background-repeat: no-repeat;
     }
   }
   .page_desc {
@@ -75,33 +75,150 @@
         border: 1px solid $color-border-form;
         padding: 2.5rem;
         line-height: 4rem;
-        p {
-          width: 100%;
-          &:not(:last-child) {
-            margin-bottom: 1.3rem;
-          }
-        }
-        input[type="radio"] {
-          display: none;
-          visibility: hidden;
-          & + label {
-            position: relative;
-            padding-left: 4.5rem;
-            &::before {
-              content: "";
-              position: absolute;
-              display: block;
-              width: 4rem;
-              aspect-ratio: 1;
-              border: 1px solid $color-border-form;
-              border-radius: 2rem;
+        .types_radio_box {
+          display: flex;
+          flex-direction: column;
+          gap: 13px;
+          div {
+            & label {
+              flex-grow: 0;
+              flex-shrink: 0;
             }
           }
-          &:checked + label::before {
-            background-color: green;
+        }
+        input {
+          &[type="radio"] {
+            display: none;
+            visibility: hidden;
+            & + label {
+              position: relative;
+              padding-left: 4.5rem;
+              margin-left: 2.8rem;
+              &::before {
+                @include customCheckboxRadio;
+                border-radius: 2rem;
+                left: -1.5rem;
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                display: none;
+                width: 18px;
+                aspect-ratio: 1;
+                background-color: green;
+                border-radius: 9px;
+                left: -4px;
+                top: 50%;
+                transform: translate(0, -50%);
+              }
+            }
+            &:checked + label {
+              &::after {
+                display: block;
+              }
+            }
           }
         }
       }
     }
   }
+
+  .box {
+    &_contacts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 7.8rem;
+      input[name="email"] {
+        &.icon {
+          background-image: url("../images/mail.png");
+        }
+      }
+      input[name="phone"] {
+        &.icon {
+          background-image: url("../images/phone.png");
+        }
+      }
+      div {
+        width: 50%;
+      }
+    }
+    &_comment {
+      textarea {
+        padding: 10px 19px;
+        width: 100%;
+        border: 1px solid $color-border-form;
+        height: 17rem !important;
+        resize: none;
+        overflow-y: scroll;
+      }
+    }
+    &_extra {
+      &_list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 5.4rem;
+        li {
+          line-height: 4rem;
+          flex: 1 0 min(200px);
+        }
+        & input[type="checkbox"] {
+          display: none;
+          visibility: hidden;
+        }
+        label {
+          position: relative;
+          padding-left: 4rem;
+          padding-left: 5.3rem;
+          &::before {
+            @include customCheckboxRadio;
+            top: 50%;
+            transform: translate(0, -50%);
+          }
+        }
+        & input[type="checkbox"]:checked + label::before {
+          background: url("../images/checked.png") center no-repeat fixed
+            padding-box;
+        }
+      }
+      &_submit {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6rem;
+        button {
+          background-color: $color-base-green;
+          padding: 1.3rem 4.5rem;
+          color: rgba(255, 255, 255, 0.6);
+          text-transform: uppercase;
+          line-height: 2.6rem;
+          transition: color 0.3s ease-in-out;
+          &:hover {
+            color: rgba(255, 255, 255, 1);
+          }
+          &:active {
+            color: rgba(255, 255, 255, 0.3);
+          }
+        }
+        p {
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
+.row_input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  & label {
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  gap: 15px;
 }
