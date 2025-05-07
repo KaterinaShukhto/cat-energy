@@ -1,0 +1,11 @@
+@mixin condition_link-hover {
+  a {
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      opacity: $opacity-60;
+    }
+    &:active {
+      opacity: $opacity-30;
+    }
+  }
+}

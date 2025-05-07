@@ -1,0 +1,174 @@
+.header {
+  &_mobile {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .box {
+    &_logo {
+      width: 20rem;
+      height: 6rem;
+      @include condition_link-hover;
+      transition: opacity 0.3s ease-in-out;
+    }
+    &_navigate {
+      @media (max-width: $breakpoint-smaller) {
+        display: block;
+        position: absolute;
+        width: 100%;
+        background: $color-base-green
+          url("../../../images/index-background-desktop.jpg") center/cover
+          no-repeat fixed padding-box;
+        background-size: cover;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  .navigate {
+    display: flex;
+    flex-direction: row;
+    &_item {
+      list-style: none;
+      &:not(:last-child) {
+        margin-right: 3.3rem;
+      }
+      &:hover a {
+        opacity: $opacity-60;
+      }
+    }
+    .item_link {
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.3s ease-in-out;
+      line-height: 3rem;
+      &.active {
+        border-bottom: 2px solid $color-base-green;
+      }
+      &:active {
+        opacity: $opacity-30;
+      }
+    }
+  }
+  @media (min-width: ($breakpoint-mobile + 1)) and (max-width: $breakpoint-tablet) {
+    .box {
+      &_logo {
+        width: 174px;
+        height: 51px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (min-width: ($breakpoint-smaller+1)) and (max-width: $breakpoint-mobile) {
+  }
+  @media (max-width: $breakpoint-smaller) {
+    & {
+      display: none;
+      visibility: hidden;
+      &_mobile {
+        display: flex;
+        height: 37px;
+        &-logo {
+          width: 33px;
+          height: 37px;
+          text-align: center;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &-title {
+          width: 101px;
+          height: 18px;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &-burger {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          width: 24px;
+          height: 16px;
+          z-index: 1000;
+          cursor: pointer;
+          .nav_burger {
+            width: 100%;
+            height: 1px;
+            background-color: $color-base-black;
+            transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+          }
+          &.active .nav_burger:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+          }
+          &.active .nav_burger:nth-child(2) {
+            width: 0;
+          }
+          &.active .nav_burger:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile {
+  &__navigate {
+    margin-top: 50px;
+  }
+  &__box_navigate {
+    z-index: 999;
+    &.hidden {
+      left: -100%;
+      opacity: 0;
+    }
+    display: block;
+    position: fixed;
+    visibility: visible;
+    width: 100%;
+    height: calc(100vh - env(safe-area-inset-bottom));
+    top: 0;
+    left: 0;
+    opacity: 1;
+    padding: 20px;
+    background: $color-base-green url("../images/burgerBg.jpg") center/cover
+      no-repeat fixed !important;
+    transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  &__navigate_item {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    list-style: none;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 15px;
+      height: 15px;
+      opacity: $opacity-60;
+      background: url("../images/pets.png") center/cover no-repeat fixed !important;
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+    }
+  }
+  &__navigate_link {
+    text-decoration: none;
+    color: $color-base-white;
+  }
+}
