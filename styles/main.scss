@@ -1,10 +1,8 @@
 @import "./global/reset/reset";
 @import "./global/fonts/font";
-@import "./pageForm/variety/variety";
-@import "./pageForm/mixins/mixin_a";
-@import "./pageForm/mixins/mixin_checkbox&radio";
+@import "./global/variable/variable";
+@import "./global/mixins/mixin_a";
+@import "./global/mixins/mixin_checkbox&radio";
 @import "./pageForm/general/general";
-@import "./pageForm/boxes/header";
-@import "./pageForm/boxes/form";
-@import "./pageForm/boxes/map";
-@import "./pageForm/boxes/footer";
+/* Стили формы */
+@import "./pageForm/index.scss";
